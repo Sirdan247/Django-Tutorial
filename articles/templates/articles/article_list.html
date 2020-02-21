@@ -7,6 +7,17 @@
     <title>Articles</title>
 </head>
 <body>
-    <h1>Articles List</h1>
+    <h1>Article List</h1>
+
+    <!-- Formating how articles in views.py are display -->
+    <div class="articles">
+        {% for article in articles %}
+            <div class="articles">
+                <h2><a href="#">{{article.title}}</a></h2>
+                <p>{{article.body}}</p>
+                <p>{{article.date}}</p>
+            </div>
+        {% endfor%}
+    </div>
 </body>
 </html>
