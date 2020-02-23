@@ -10,6 +10,6 @@ def article_list(request):
     # sending articles data to the template
     return render(request,'articles/article_list.html', {'articles': articles})
     # go to templates 
-        # use the ffg template tags 
+        # use the ffg template tags  to format articles data received
         # {% %} to write python codes
         # {{}} to output data

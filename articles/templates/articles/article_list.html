@@ -1,9 +1,19 @@
+<!-- Load static to link css -->
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <!-- Link css through hardcoding -->
+    <!-- <link rel="stylesheet" href="/static/styles.css"> -->
+
+    <!-- Link css through the loaded static  -->
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+
     <title>Articles</title>
 </head>
 <body>
@@ -14,7 +24,7 @@
         {% for article in articles %}
             <div class="articles">
                 <h2><a href="#">{{article.title}}</a></h2>
-                <p>{{article.body}}</p>
+                <p>{{article.snippet}}</p> <!-- Use article.body to display the full content of an article-->
                 <p>{{article.date}}</p>
             </div>
         {% endfor%}

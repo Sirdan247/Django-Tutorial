@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# create a property for the location of our assets
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets'),
+)
+# Go create assets folder in project folder (DJANGONAUTICS)
