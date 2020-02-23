@@ -1,0 +1,24 @@
+<!-- Load static to link css -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Articles</title>
+
+        <!-- Link css through the loaded static  -->
+        <link rel="stylesheet" href="{% static 'styles.css'%}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- put individual contents here -->
+            {% block content %}
+            {% endblock %}
+        </div>
+        <!-- Go to individual html template -->
+    </body>
+</html>
